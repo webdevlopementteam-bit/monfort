@@ -62,6 +62,7 @@ export default function HeroSwiper() {
               alt={slide.title}
               fill
               priority={index === 0}
+              loading={index === 1 ? "eager" : undefined}
               sizes="100vw"
               className="object-cover"
             />

@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Monfort",
   description: "",
+  icons: {
+    icon: "/logo.jpeg",
+  },
 };
 
 export default function RootLayout({ children }) {
