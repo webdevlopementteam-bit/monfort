@@ -16,6 +16,27 @@ export default function CategoryPage({
   data,
   backHref = "/products",
 }) {
+  // Check whether this category uses range instead of size
+  const isRangeCategory = data.some((item) => item.range);
+
+  // Check whether any item has sizes
+  const hasSizes = data.some(
+    (item) =>
+      item.size &&
+      (Array.isArray(item.size) ? item.size.length > 0 : item.size),
+  );
+
+  // Get all unique sizes
+  const uniqueSizes = [
+    ...new Set(
+      data.flatMap((item) => {
+        if (!item.size) return [];
+
+        return Array.isArray(item.size) ? item.size : [item.size];
+      }),
+    ),
+  ];
+
   return (
     <section className="relative min-h-screen overflow-hidden bg-gray-50 py-10 lg:py-16">
       {/* Background Decorations */}
@@ -46,6 +67,7 @@ export default function CategoryPage({
                 alt={title}
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-contain p-8 transition-transform duration-700 group-hover:scale-105 sm:p-12"
               />
             </div>
@@ -74,7 +96,11 @@ export default function CategoryPage({
             </p>
 
             {/* Quick Stats */}
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div
+              className={`mt-8 grid gap-4 ${
+                hasSizes ? "grid-cols-2 sm:grid-cols-3" : "grid-cols-2"
+              }`}
+            >
               {/* Variants */}
               <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
                 <Package className="mb-2 h-5 w-5 text-[#258F94]" />
@@ -89,15 +115,19 @@ export default function CategoryPage({
               </div>
 
               {/* Sizes */}
-              <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
-                <Ruler className="mb-2 h-5 w-5 text-[#258F94]" />
+              {hasSizes && (
+                <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
+                  <Ruler className="mb-2 h-5 w-5 text-[#258F94]" />
 
-                <p className="text-2xl font-bold text-gray-900">
-                  {new Set(data.map((item) => item.size)).size}
-                </p>
+                  <p className="text-2xl font-bold text-gray-900">
+                    {uniqueSizes.length}
+                  </p>
 
-                <p className="mt-1 text-xs font-medium text-gray-500">Sizes</p>
-              </div>
+                  <p className="mt-1 text-xs font-medium text-gray-500">
+                    Sizes
+                  </p>
+                </div>
+              )}
 
               {/* Quality */}
               <div className="rounded-2xl border border-gray-100 bg-white p-4 shadow-sm">
@@ -143,34 +173,51 @@ export default function CategoryPage({
               <table className="w-full text-left">
                 <thead>
                   <tr className="bg-[#258F94] text-white">
+                    {/* Code */}
                     {data.some((item) => item.code) && (
                       <th className="px-6 py-5 text-sm font-bold">Code</th>
                     )}
 
-                    <th className="px-6 py-5 text-sm font-bold">Size</th>
+                    {/* Range / Size */}
+                    {isRangeCategory ? (
+                      <th className="px-6 py-5 text-sm font-bold">Range</th>
+                    ) : (
+                      <th className="px-6 py-5 text-sm font-bold">Size</th>
+                    )}
 
+                    {/* Bowl */}
                     {data.some((item) => item.bowl) && (
                       <th className="px-6 py-5 text-sm font-bold">Bowl</th>
                     )}
 
+                    {/* Weight */}
                     {data.some((item) => item.weightKg !== undefined) && (
                       <th className="px-6 py-5 text-sm font-bold">Weight</th>
                     )}
 
+                    {/* Polish */}
                     {data.some((item) => item.polish) && (
                       <th className="px-6 py-5 text-sm font-bold">Polish</th>
                     )}
 
+                    {/* Finish */}
                     {data.some((item) => item.finish) && (
                       <th className="px-6 py-5 text-sm font-bold">Finish</th>
                     )}
 
+                    {/* Features */}
                     {data.some((item) => item.features?.length > 0) && (
                       <th className="px-6 py-5 text-sm font-bold">Features</th>
                     )}
 
+                    {/* Notes */}
                     {data.some((item) => item.notes) && (
                       <th className="px-6 py-5 text-sm font-bold">Notes</th>
+                    )}
+
+                    {/* Sizes for Range based products */}
+                    {isRangeCategory && hasSizes && (
+                      <th className="px-6 py-5 text-sm font-bold">Sizes</th>
                     )}
                   </tr>
                 </thead>
@@ -190,10 +237,12 @@ export default function CategoryPage({
                         </td>
                       )}
 
-                      {/* Size */}
+                      {/* Range / Size */}
                       <td className="px-6 py-5">
-                        <span className="font-semibold text-gray-900">
-                          {item.size || "-"}
+                        <span className=" font-semibold text-gray-900">
+                          {isRangeCategory
+                            ? item.range || "-"
+                            : item.size || "-"}
                         </span>
                       </td>
 
@@ -271,6 +320,29 @@ export default function CategoryPage({
                           {item.notes || "-"}
                         </td>
                       )}
+
+                      {/* Sizes for Range based products */}
+                      {isRangeCategory && hasSizes && (
+                        <td className="px-6 py-5">
+                          {item.size ? (
+                            <div className="flex flex-wrap gap-2">
+                              {(Array.isArray(item.size)
+                                ? item.size
+                                : [item.size]
+                              ).map((size) => (
+                                <span
+                                  key={size}
+                                  className="rounded-full bg-[#258F94]/10 px-3 py-1 text-xs font-semibold text-[#258F94]"
+                                >
+                                  {size}
+                                </span>
+                              ))}
+                            </div>
+                          ) : (
+                            "-"
+                          )}
+                        </td>
+                      )}
                     </tr>
                   ))}
                 </tbody>
@@ -289,30 +361,62 @@ export default function CategoryPage({
                 <div className="flex items-center justify-between border-b border-gray-100 pb-4">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-[#258F94]">
-                      Model
+                      {isRangeCategory ? "Range" : "Model"}
                     </p>
 
                     <h3 className="mt-1 text-xl font-bold text-gray-900">
-                      {item.code ||
-                        `Model ${String(index + 1).padStart(2, "0")}`}
+                      {isRangeCategory
+                        ? item.range ||
+                          `Model ${String(index + 1).padStart(2, "0")}`
+                        : item.code ||
+                          `Model ${String(index + 1).padStart(2, "0")}`}
                     </h3>
                   </div>
 
-                  <div className="rounded-full bg-[#258F94]/10 px-3 py-1.5">
-                    <span className="text-sm font-bold text-[#258F94]">
-                      {item.size}
-                    </span>
-                  </div>
+                  {/* Size badge for normal products */}
+                  {!isRangeCategory && item.size && (
+                    <div className="rounded-full bg-[#258F94]/10 px-3 py-1.5">
+                      <span className="text-sm font-bold text-[#258F94]">
+                        {item.size}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Details */}
                 <div className="mt-5 space-y-4">
+                  {/* Size for PTMT / Range products */}
+                  {isRangeCategory && item.size && (
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
+                        Size
+                      </p>
+
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {(Array.isArray(item.size)
+                          ? item.size
+                          : [item.size]
+                        ).map((size) => (
+                          <span
+                            key={size}
+                            className="rounded-full bg-[#258F94]/10 px-3 py-1.5 text-xs font-semibold text-[#258F94]"
+                          >
+                            {size}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Bowl */}
                   {item.bowl && <DetailRow label="Bowl" value={item.bowl} />}
 
+                  {/* Weight */}
                   {item.weightKg !== undefined && (
                     <DetailRow label="Weight" value={`${item.weightKg} Kg`} />
                   )}
 
+                  {/* Polish */}
                   {item.polish && (
                     <DetailRow label="Polish" value={item.polish} />
                   )}
@@ -396,7 +500,7 @@ function DetailRow({ label, value }) {
         {label}
       </p>
 
-      <p className="text-sm font-semibold text-gray-800">{value}</p>
+      <p className="text-right text-sm font-semibold text-gray-800">{value}</p>
     </div>
   );
 }

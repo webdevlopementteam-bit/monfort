@@ -26,7 +26,7 @@ const categories = {
     description:
       "Durable and lightweight PTMT taps designed for smooth water flow, reliable performance and long-lasting use in modern kitchens.",
     image: "/products/pmtp.png",
-    data: sinksCatalog.handmadeSinks,
+    data: sinksCatalog.ptmtTaps,
   },
 
   waterfall: {
@@ -43,22 +43,6 @@ const categories = {
       "High-grade handmade sinks manufactured with premium stainless steel, precise craftsmanship and superior finishing.",
     image: "/products/Grade_Handmade_Sinks.png",
     data: sinksCatalog.grade304Sinks,
-  },
-
-  "single-bowl": {
-    title: "SINGLE BOWL",
-    description:
-      "Practical single bowl sinks offering spacious washing areas, easy cleaning and durable construction.",
-    image: "/products/SINGLE BOWL.png",
-    data: sinksCatalog.singleBowlSteel,
-  },
-
-  "double-bowl": {
-    title: "DOUBLE BOWL",
-    description:
-      "Spacious double bowl sinks designed for convenient multitasking in busy kitchens.",
-    image: "/products/double bowl.png",
-    data: sinksCatalog.doubleBowlSteel,
   },
 };
 

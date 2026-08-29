@@ -326,7 +326,7 @@ export default function FAQ() {
           BOTTOM DIVIDER
       ====================================================== */}
 
-      <div className="mx-auto mt-16 flex max-w-7xl items-center gap-3 px-4 sm:mt-20 sm:gap-4 sm:px-6 lg:mt-24 lg:px-8">
+      <div className="mx-auto mt-10 flex max-w-7xl items-center gap-2 px-4 sm:mt-10 sm:gap-2 sm:px-6 lg:mt-15 lg:px-8">
         <div className="h-px flex-1 bg-gray-200" />
 
         <span className="whitespace-nowrap text-[8px] font-semibold uppercase tracking-[2.5px] text-[#34acb1] sm:text-[10px] sm:tracking-[4px]">

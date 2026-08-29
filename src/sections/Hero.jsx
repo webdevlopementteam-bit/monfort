@@ -25,7 +25,7 @@ export default function HeroSwiper() {
     },
     {
       img: "/hero/hero3.jpg",
-      eyebrow: "SINCE 2017",
+      eyebrow: "SINCE 2000",
       title: "Built on Quality & Precision",
       text: "Advanced machinery, skilled craftsmanship and strict quality control ensure excellence in every sink we manufacture.",
       button: "About Monfort",
@@ -113,7 +113,7 @@ export default function HeroSwiper() {
                   {/* Brand Highlights */}
                   <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-white/30 pt-6">
                     <div>
-                      <p className="text-2xl font-bold">2017</p>
+                      <p className="text-2xl font-bold">2000</p>
                       <p className="text-xs uppercase tracking-wider text-white/75">
                         Established
                       </p>

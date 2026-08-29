@@ -46,7 +46,7 @@ export default function Contact() {
       ====================================================== */}
 
       <section
-        className="relative overflow-hidden bg-white py-10 lg:py-15 scroll-mt-24"
+        className="relative overflow-hidden bg-white py-10 lg:py-10 scroll-mt-24"
         id="contact"
       >
         {/* Background Decorations */}
@@ -153,24 +153,46 @@ export default function Contact() {
                 <div className="mt-8 space-y-4">
                   {/* Phone */}
 
-                  <a
-                    href="tel:+919871667213"
-                    className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-4 transition-all duration-300 hover:border-[#34acb1]/40 hover:bg-[#34acb1]/10"
-                  >
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#34acb1]/10 text-[#34acb1] transition-colors group-hover:bg-[#34acb1] group-hover:text-white">
-                      <Phone size={19} />
+                  <div className="group flex items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.04] p-3 transition-all duration-300 hover:border-[#34acb1]/40 hover:bg-[#34acb1]/10 sm:gap-4 sm:p-4">
+                    {/* Phone Icon */}
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#34acb1]/10 text-[#34acb1] transition-colors group-hover:bg-[#34acb1] group-hover:text-white sm:h-11 sm:w-11">
+                      <Phone size={17} className="sm:h-[19px] sm:w-[19px]" />
                     </div>
 
-                    <div>
-                      <p className="text-[10px] font-bold uppercase tracking-[1.5px] text-gray-500">
-                        Call Us
-                      </p>
+                    {/* Numbers */}
+                    <div className="flex min-w-0 flex-1 items-center">
+                      {/* Call Us */}
+                      <a
+                        href="tel:+919871667213"
+                        className="min-w-0 flex-1 pr-2 sm:pr-4"
+                      >
+                        <p className="truncate text-[8px] font-bold uppercase tracking-[1px] text-gray-500 sm:text-[10px] sm:tracking-[1.5px]">
+                          Call Us
+                        </p>
 
-                      <p className="mt-1 text-sm font-semibold text-white">
-                        +91 9871667213
-                      </p>
+                        <p className="mt-1 whitespace-nowrap text-[11px] font-semibold text-white transition-colors hover:text-[#34acb1] sm:text-sm">
+                          +91-9871667213
+                        </p>
+                      </a>
+
+                      {/* Divider */}
+                      <div className="h-9 w-px shrink-0 bg-white/20 sm:mx-4 sm:h-10" />
+
+                      {/* Office Number */}
+                      <a
+                        href="tel:+918383972282"
+                        className="min-w-0 flex-1 pl-2 sm:pl-4"
+                      >
+                        <p className="truncate text-[8px] font-bold uppercase tracking-[1px] text-gray-500 sm:text-[10px] sm:tracking-[1.5px]">
+                          Office No.
+                        </p>
+
+                        <p className="mt-1 whitespace-nowrap text-[11px] font-semibold text-white transition-colors hover:text-[#34acb1] sm:text-sm">
+                          +91-8383972282
+                        </p>
+                      </a>
                     </div>
-                  </a>
+                  </div>
 
                   {/* Email */}
 

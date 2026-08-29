@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
             <p className="max-w-xl text-base leading-7 text-gray-600 sm:text-lg">
               <span className="font-bold text-[#258F94]">Monfort Kitchens</span>{" "}
               started our business journey in the year{" "}
-              <span className="font-semibold text-gray-900">2017</span>. With a
+              <span className="font-semibold text-gray-900">2000</span>. With a
               strong commitment to quality and innovation, we continue to
               deliver reliable and stylish kitchen solutions.
             </p>

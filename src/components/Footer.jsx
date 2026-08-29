@@ -20,7 +20,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#0c0c0c] text-gray-300 mt-20">
+    <footer className="bg-[#0c0c0c] text-gray-300 mt-15">
       {/* Main Footer */}
       <div className="w-full mx-auto px-7 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -32,16 +32,25 @@ export default function Footer() {
 
             <div className="space-y-6">
               {/* Phone */}
-              <div className="flex items-center  gap-4 md:gap-5">
+              <div className="flex items-center gap-4 md:gap-5">
                 <div className="w-12 h-12 md:w-16 md:h-16 rounded bg-[#1c1c1c] flex items-center justify-center">
                   <Phone className="text-[#34acb1]" size={24} />
                 </div>
-                <a
-                  href="tel:+919871667213"
-                  className="text-sm md:text-base text-gray-300 hover:text-[#34acb1] transition"
-                >
-                  +91-9871667213
-                </a>
+
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="tel:+918383972282"
+                    className="text-sm md:text-base text-gray-300 hover:text-[#34acb1] transition"
+                  >
+                    +91-8383972282
+                  </a>
+                  <a
+                    href="tel:+919871667213"
+                    className="text-sm md:text-base text-gray-300 hover:text-[#34acb1] transition"
+                  >
+                    +91-9871667213
+                  </a>
+                </div>
               </div>
 
               {/* Email */}
