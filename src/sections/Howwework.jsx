@@ -57,7 +57,7 @@ export default function HowWeWork() {
 
             <h2 className="mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-gray-900 leading-[1.05]">
               How We
-              <br className="hidden sm:block" />
+              <br />
               Work?
             </h2>
           </div>

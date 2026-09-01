@@ -8,34 +8,69 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSwiper() {
+  // const slides = [
+  //   {
+  //     img: "/hero/hero1.jpg",
+  //     eyebrow: "PREMIUM STAINLESS STEEL SINKS",
+  //     title: "Crafting Quality for Modern Kitchens",
+  //     text: "Premium stainless steel kitchen sinks designed with superior finishing, durability and modern aesthetics.",
+  //     button: "Explore Sinks",
+  //   },
+  //   {
+  //     img: "/hero/hero2.jpg",
+  //     eyebrow: "TRUSTED MANUFACTURING",
+  //     title: "Quality You Can Depend On",
+  //     text: "Serving homes, hotels, restaurants and commercial kitchens with reliable products and customer-focused service.",
+  //     button: "Contact Us",
+  //   },
+  //   {
+  //     img: "/hero/hero3.jpg",
+  //     eyebrow: "SINCE 2000",
+  //     title: "Built on Quality & Precision",
+  //     text: "Advanced machinery, skilled craftsmanship and strict quality control ensure excellence in every sink we manufacture.",
+  //     button: "About Monfort",
+  //   },
+  //   {
+  //     img: "/hero/hero4.jpg",
+  //     eyebrow: "DESIGNED FOR EVERY KITCHEN",
+  //     title: "From Classic to Designer Sinks",
+  //     text: "Discover handmade and Indian sinks, including single bowl, double bowl and designer styles crafted to match modern lifestyles.",
+  //     button: "View Products",
+  //   },
+  // ];
+
   const slides = [
     {
       img: "/hero/hero1.jpg",
       eyebrow: "PREMIUM STAINLESS STEEL SINKS",
       title: "Crafting Quality for Modern Kitchens",
-      text: "Premium stainless steel kitchen sinks designed with superior finishing, durability and modern aesthetics.",
+      text: "Discover our premium range of Handmade, Indian and 304 Grade stainless steel sinks, crafted in multiple sizes and single or double bowl designs for modern kitchens.",
       button: "Explore Sinks",
+      link: "/products",
     },
     {
       img: "/hero/hero2.jpg",
       eyebrow: "TRUSTED MANUFACTURING",
       title: "Quality You Can Depend On",
-      text: "Serving homes, hotels, restaurants and commercial kitchens with reliable products and customer-focused service.",
+      text: "Explore a reliable range of Handmade, Indian and 304 Grade sinks, available in practical sizes, finishes and configurations to meet different kitchen requirements.",
       button: "Contact Us",
+      link: "#contact",
     },
     {
       img: "/hero/hero3.jpg",
       eyebrow: "SINCE 2000",
       title: "Built on Quality & Precision",
-      text: "Advanced machinery, skilled craftsmanship and strict quality control ensure excellence in every sink we manufacture.",
+      text: "Our sink collection offers carefully designed options across multiple sizes, from compact single bowl models to spacious double bowl designs with practical features and finishes.",
       button: "About Monfort",
+      link: "#about",
     },
     {
       img: "/hero/hero4.jpg",
       eyebrow: "DESIGNED FOR EVERY KITCHEN",
       title: "From Classic to Designer Sinks",
-      text: "Discover single bowl, double bowl, handmade and designer kitchen sinks crafted to match modern lifestyles.",
+      text: "Choose from classic Indian and Handmade sinks, modern Waterfall models with integrated accessories, and stylish Metallic & Granite designs in a variety of finishes.",
       button: "View Products",
+      link: "/products",
     },
   ];
 
@@ -49,7 +84,7 @@ export default function HeroSwiper() {
         slidesPerView={1}
         loop
         autoplay={{
-          delay: 4000,
+          delay: 6000,
           disableOnInteraction: false,
         }}
         className="h-[520px] sm:h-[580px] md:h-[650px] lg:h-[680px]"
@@ -97,7 +132,7 @@ export default function HeroSwiper() {
                   {/* Buttons */}
                   <div className="mt-8 flex flex-wrap gap-4">
                     <Link
-                      href="/products"
+                      href={slide.link}
                       className="rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#34acb1] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-100"
                     >
                       {slide.button}

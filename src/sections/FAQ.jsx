@@ -12,45 +12,80 @@ import Link from "next/link";
 
 // ================= FAQ DATA =================
 
+// const faqs = [
+//   {
+//     question: "What types of kitchen sinks do you manufacture?",
+//     answer:
+//       "We manufacture a wide range of premium kitchen sinks including single bowl, double bowl, handmade, designer and modern stainless steel sinks. Our products are available in different sizes, finishes and designs to suit residential and commercial kitchens.",
+//   },
+//   {
+//     question: "What material is used to manufacture your sinks?",
+//     answer:
+//       "Our kitchen sinks are manufactured using high-quality stainless steel selected for durability, strength, corrosion resistance and long-lasting performance.",
+//   },
+//   {
+//     question: "Do you offer different sink sizes and designs?",
+//     answer:
+//       "Yes. We offer multiple sizes and designs to suit different kitchen layouts. Our range includes compact single and double bowl sinks, handmade sinks and designer models.",
+//   },
+//   {
+//     question: "Are Monfort Kitchen sinks suitable for commercial kitchens?",
+//     answer:
+//       "Yes. Our sinks are suitable for homes as well as hotels, restaurants, commercial kitchens and other professional environments where durability and reliable performance are important.",
+//   },
+//   {
+//     question: "What finishes are available?",
+//     answer:
+//       "We offer a variety of finishes and surface styles depending on the product model, including modern, premium and designer finishes that complement contemporary kitchen interiors.",
+//   },
+//   {
+//     question: "Can I enquire about bulk or commercial orders?",
+//     answer:
+//       "Absolutely. We welcome bulk, commercial and project-based enquiries. Contact our team with your requirements and we can help you choose suitable products and quantities.",
+//   },
+//   {
+//     question: "How can I contact Monfort Kitchen?",
+//     answer:
+//       "You can contact our team through the Get In Touch option on our website. Share your product requirements and our team will assist you with product information and enquiries.",
+//   },
+// ];
 const faqs = [
   {
     question: "What types of kitchen sinks do you manufacture?",
     answer:
-      "We manufacture a wide range of premium kitchen sinks including single bowl, double bowl, handmade, designer and modern stainless steel sinks. Our products are available in different sizes, finishes and designs to suit residential and commercial kitchens.",
+      "We offer a wide range of kitchen products including Handmade Sinks, Indian Kitchen Sinks, 304 Grade Sinks, Waterfall Sinks and Metallic & Granite Series. Our collection includes both single bowl and double bowl designs in multiple sizes and styles.",
   },
   {
     question: "What material is used to manufacture your sinks?",
     answer:
-      "Our kitchen sinks are manufactured using high-quality stainless steel selected for durability, strength, corrosion resistance and long-lasting performance.",
+      "Our sink collection includes stainless steel products such as Handmade Sinks, Indian Kitchen Sinks and 304 Grade Sinks. We also offer a Metallic & Granite Series with a variety of decorative finishes and designs.",
   },
   {
     question: "Do you offer different sink sizes and designs?",
     answer:
-      "Yes. We offer multiple sizes and designs to suit different kitchen layouts. Our range includes compact single bowl sinks, large double bowl sinks, handmade sinks and designer models.",
+      "Yes. Our sinks are available in multiple sizes, including popular options such as 14x16, 18x16, 20x17, 21x18, 22x18, 24x18, 30x18, 37x18, 45x20 and larger designs, depending on the product category.",
   },
   {
     question: "Are Monfort Kitchen sinks suitable for commercial kitchens?",
     answer:
-      "Yes. Our sinks are suitable for homes as well as hotels, restaurants, commercial kitchens and other professional environments where durability and reliable performance are important.",
+      "Our product range includes durable sink designs available in different sizes and configurations, including single bowl and double bowl options. Customers can select a suitable model based on their kitchen requirements and usage needs.",
   },
   {
     question: "What finishes are available?",
     answer:
-      "We offer a variety of finishes and surface styles depending on the product model, including modern, premium and designer finishes that complement contemporary kitchen interiors.",
+      "Available finishes depend on the product model. Our Handmade Sinks include finishes such as Matt, Nano Black, Gold, Mirror and Rose Gold. Indian Sinks are available in Glossy finish, while our Metallic & Granite Series includes finishes such as Black, Brown, Gray, Cera Dotted, Ivory Sand, Red Moon and Peach Ivory.",
   },
   {
     question: "Can I enquire about bulk or commercial orders?",
     answer:
-      "Absolutely. We welcome bulk, commercial and project-based enquiries. Contact our team with your requirements and we can help you choose suitable products and quantities.",
+      "Yes. You can contact our team with your product requirements, preferred sink category, size and quantity. We can assist you with suitable options from our Handmade, Indian, 304 Grade, Waterfall and Metallic & Granite collections.",
   },
   {
     question: "How can I contact Monfort Kitchen?",
     answer:
-      "You can contact our team through the Get In Touch option on our website. Share your product requirements and our team will assist you with product information and enquiries.",
+      "You can contact our team through the Get In Touch option on our website. Share the product category, preferred size or model you are interested in, and our team will assist you with further product information and enquiries.",
   },
 ];
-
-// ================= FAQ COMPONENT =================
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);

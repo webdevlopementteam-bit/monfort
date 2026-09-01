@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { sinksCatalog } from "@/data.js";
 import CategoryPage from "@/sections/Category";
 import Products from "@/sections/Product";
+import MetallicGraniteSeries from "@/sections/Metallic_Granite_Series";
 
 const categories = {
   handmade: {
@@ -49,7 +50,10 @@ const categories = {
 function ProductsContent() {
   const searchParams = useSearchParams();
   const category = searchParams.get("category");
-
+  // Metallic & Granite
+  if (category === "metallic_granite") {
+    return <MetallicGraniteSeries />;
+  }
   const selected = categories[category];
 
   // No category = show your normal Products listing

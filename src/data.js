@@ -1,69 +1,68 @@
 export const sinksCatalog = {
   handmadeSinks: [
     {
-      size: "24x18",
-      bowl: "Single",
-      finish: ["Matt", "Nano Black", "Gold", "Mirror", "Rose Gold"],
-      features: [],
-    },
-    {
-      size: "24x18",
-      bowl: "Single",
-      finish: ["Matt", "Nano Black"],
-      features: ["Taphole"],
-    },
-    {
       size: "18x16",
       bowl: "Single",
       finish: ["Matt", "Nano Black"],
-      features: [],
+      options: [],
     },
-    { size: "20x17", bowl: "Single", finish: ["Matt"], features: [] },
-    { size: "21x18", bowl: "Single", finish: ["Matt"], features: [] },
-    { size: "22x18", bowl: "Single", finish: ["Matt"], features: [] },
+    { size: "20x17", bowl: "Single", finish: ["Matt"], options: [] },
+    { size: "21x18", bowl: "Single", finish: ["Matt"], options: [] },
+    { size: "22x18", bowl: "Single", finish: ["Matt"], options: [] },
+    {
+      size: "24x18",
+      bowl: "Single",
+      finish: ["Matt", "Nano Black", "Gold", "Mirror", "Rose Gold"],
+      options: [],
+    },
+    {
+      size: "24x18",
+      bowl: "Single",
+      finish: ["Matt", "Nano Black"],
+      options: ["Taphole"],
+    },
+    { size: "24x24", bowl: "Single", finish: ["Matt"], options: [] },
+    { size: "27x20", bowl: "Single", finish: ["Matt"], options: [] },
+    { size: "30x18", bowl: "Single", finish: ["Matt"], options: [] },
+    { size: "32x18", bowl: "Double", finish: ["Matt"], options: [] },
+    { size: "32x20", bowl: "Single", finish: ["Matt"], options: [] },
     {
       size: "37x18",
       bowl: "Double",
       finish: ["Matt", "Nano Black"],
-      features: [],
+      options: [],
     },
     {
       size: "37x18",
       bowl: "Double",
       finish: ["Matt", "Nano Black"],
-      features: ["Taphole"],
+      options: ["Taphole"],
     },
     {
       size: "37x18",
       bowl: "Single",
       finish: ["Matt"],
-      features: ["Drainboard"],
+      options: ["Drainboard"],
     },
     {
       size: "45x20",
       bowl: "Double",
       finish: ["Matt", "Nano Black"],
-      features: [],
+      options: [],
     },
     {
       size: "45x20",
       bowl: "Double",
       finish: ["Matt", "Nano Black"],
-      features: ["Taphole"],
+      options: ["Taphole"],
     },
     {
       size: "45x20",
       bowl: "Single",
       finish: ["Matt"],
-      features: ["Drainboard"],
+      options: ["Drainboard"],
     },
-    { size: "30x18", bowl: "Single", finish: ["Matt"], features: [] },
-    { size: "32x20", bowl: "Single", finish: ["Matt"], features: [] },
-    { size: "32x18", bowl: "Double", finish: ["Matt"], features: [] },
-    { size: "27x20", bowl: "Single", finish: ["Matt"], features: [] },
-    { size: "24x24", bowl: "Single", finish: ["Matt"], features: [] },
   ],
-
   indianSinks: [
     { size: "14x16", bowl: "Single", weightKg: 1000, finish: "Glossy" },
     { size: "15x12", bowl: "Single", weightKg: 1000, finish: "Glossy" },
@@ -75,57 +74,50 @@ export const sinksCatalog = {
     { size: "22x18", bowl: "Single", weightKg: 2400, finish: "Glossy" },
     { size: "22x18", bowl: "Single", weightKg: 2700, finish: "Glossy" },
     { size: "22x18", bowl: "Single", weightKg: 3100, finish: "Glossy" },
+    {
+      size: "22x18",
+      bowl: "Single",
+      weightKg: 3100,
+      finish: "Glossy",
+      options: ["Square bowl back coating"],
+    },
     { size: "24x18", bowl: "Single", weightKg: 1600, finish: "Glossy" },
     { size: "24x18", bowl: "Single", weightKg: 2100, finish: "Glossy" },
     { size: "24x18", bowl: "Single", weightKg: 2400, finish: "Glossy" },
     { size: "24x18", bowl: "Single", weightKg: 2700, finish: "Glossy" },
     { size: "24x18", bowl: "Single", weightKg: 3100, finish: "Glossy" },
     {
-      size: "22x18",
-      bowl: "Single",
-      weightKg: 3100,
-      finish: "Glossy",
-      features: ["Square bowl back coating"],
-    },
-    {
       size: "24x18",
       bowl: "Single",
       finish: "Glossy",
-      features: ["Square bowl back coating"],
+      options: ["Square bowl back coating"],
     },
     { size: "37x18", bowl: "Double", weightKg: 3000, finish: "Glossy" },
+    { size: "37x18", bowl: "Double", weightKg: 4000, finish: "Glossy" },
     {
       size: "37x18",
       bowl: "Double",
       weightKg: 4000,
       finish: "Glossy",
-    },
-    {
-      size: "37x18",
-      bowl: "Double",
-      weightKg: 4000,
-      finish: "Glossy",
-      features: ["Square bowl back coating"],
+      options: ["Square bowl back coating"],
     },
   ],
-
   grade304Sinks: [
-    { size: "24x18", finish: "Matt", features: [] },
-    { size: "24x18", finish: "Matt", features: ["Taphole"] },
-    { size: "37x18", finish: "Matt", features: [] },
-    { size: "37x18", finish: "Matt", features: ["Taphole"] },
-    { size: "45x20", finish: "Matt", features: [] },
-    { size: "45x20", finish: "Matt", features: ["Taphole"] },
-    { size: "30x18", bowl: "Single", finish: "Matt", features: [] },
-    { size: "18x16", finish: "Matt", features: [] },
+    { size: "18x16", finish: "Matt", options: [] },
+    { size: "24x18", finish: "Matt", options: [] },
+    { size: "24x18", finish: "Matt", options: ["Taphole"] },
+    { size: "30x18", bowl: "Single", finish: "Matt", options: [] },
+    { size: "37x18", finish: "Matt", options: [] },
+    { size: "37x18", finish: "Matt", options: ["Taphole"] },
+    { size: "45x20", finish: "Matt", options: [] },
+    { size: "45x20", finish: "Matt", options: ["Taphole"] },
   ],
-
   waterfallSinks: [
     {
       size: "24x18",
       bowl: "Single",
       finish: "Nano Black",
-      features: [
+      options: [
         "Waterfall Faucet",
         "Glass Washer",
         "Soap Dispenser",
@@ -140,7 +132,7 @@ export const sinksCatalog = {
       size: "30x18",
       bowl: "Single",
       finish: "Nano Black",
-      features: [
+      options: [
         "Waterfall Faucet",
         "Glass Washer",
         "Soap Dispenser",
@@ -155,7 +147,7 @@ export const sinksCatalog = {
       size: "30x18",
       bowl: "Single",
       finish: "Nano Black",
-      features: [
+      options: [
         "Piano Button",
         "Waterfall Faucet",
         "Glass Washer",
@@ -167,12 +159,11 @@ export const sinksCatalog = {
         "Coupling Set",
       ],
     },
-
     {
-      size: "46x18",
+      size: "37x18",
       bowl: "Double",
       finish: "Nano Black",
-      features: [
+      options: [
         "Waterfall Faucet",
         "Glass Washer",
         "Soap Dispenser",
@@ -184,10 +175,10 @@ export const sinksCatalog = {
       ],
     },
     {
-      size: "37x18",
+      size: "46x18",
       bowl: "Double",
       finish: "Nano Black",
-      features: [
+      options: [
         "Waterfall Faucet",
         "Glass Washer",
         "Soap Dispenser",
@@ -199,20 +190,70 @@ export const sinksCatalog = {
       ],
     },
   ],
-
   ptmtTaps: [
-    { range: "Long body" },
-    { range: "Bib cock" },
-    { range: "Angel wall" },
-    { range: "Pillar cock" },
-    { range: "Nozzle cock" },
-    { range: "Washing cock" },
-    { range: "Sink cock" },
-    { range: "Swan neck" },
-    { range: "2 in 1 A/W" },
-    { range: "2 in 1 B/C" },
-    { range: "Centre hole" },
-    { range: "Sink mixer" },
+    { range: "Long body", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "Bib cock", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "Angel wall", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "Pillar cock", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "Nozzle cock", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "Washing cock", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "Sink cock", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "Swan neck", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "2 in 1 A/W", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "2 in 1 B/C", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "Centre hole", size: ["15 mm", "17 mm", "20 mm"] },
+    { range: "Sink mixer", size: ["15 mm", "17 mm", "20 mm"] },
     { range: "Wall mixer - L band", size: ["15 mm", "17 mm", "20 mm"] },
+  ],
+};
+
+export const metallicGraniteProducts = {
+  "24x18 - Single Bowl": [
+    { name: "black.png", image: "/metallicGraniteProducts/24_18/black.png" },
+    {
+      name: "Brown.png",
+      image: "/metallicGraniteProducts/24_18/Brown_Finish.png",
+    },
+    { name: "Gray.jpg", image: "/metallicGraniteProducts/24_18/gray.png" },
+    {
+      name: "Cera Dotted.png",
+      image: "/metallicGraniteProducts/24_18/Cera_Dotted_Finish.png",
+    },
+    {
+      name: "gray_stone.png",
+      image: "/metallicGraniteProducts/24_18/gray_stone.png",
+    },
+    {
+      name: "Ivory Sand.png",
+      image: "/metallicGraniteProducts/24_18/Ivory Sand.png",
+    },
+    {
+      name: "Red Moon.png",
+      image: "/metallicGraniteProducts/24_18/Red Moon Finish.png",
+    },
+  ],
+
+  "37x18 | 45x18 - Double Bowl": [
+    { name: "black.png", image: "/metallicGraniteProducts/37_18/black.png" },
+    {
+      name: "Cera Dotted.png",
+      image: "/metallicGraniteProducts/37_18/Cera Dotted.png",
+    },
+    {
+      name: "gray.png",
+      image: "/metallicGraniteProducts/37_18/gray Finish.png",
+    },
+    {
+      name: "Ivory Sand.png",
+      image: "/metallicGraniteProducts/37_18/Ivory Sand.png",
+    },
+    {
+      name: "Red Moon.png",
+      image: "/metallicGraniteProducts/37_18/Red Moon.png",
+    },
+    {
+      name: "Peach Ivory.png",
+      image: "/metallicGraniteProducts/37_18/Peach Ivory.png",
+    },
   ],
 };

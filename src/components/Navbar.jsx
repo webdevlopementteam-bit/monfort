@@ -13,9 +13,9 @@ export default function Header() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "#about" },
-    { name: "Products", href: "#products" },
-    { name: "Testimonial", href: "#testimonial" },
-    { name: "Contact Us", href: "#contact" },
+    { name: "Products", href: "/#products" },
+    { name: "Testimonial", href: "/#testimonial" },
+    { name: "Contact Us", href: "/#contact" },
   ];
 
   return (
@@ -172,39 +172,7 @@ export default function Header() {
 
               {/* Mobile Contact Info */}
               <div className="mt-4 border-t border-gray-100 pt-4">
-                <p className="mb-3 text-[10px] font-bold uppercase tracking-[1.5px] text-gray-400">
-                  Contact
-                </p>
-
-                <div className="grid grid-cols-2 gap-3">
-                  <a
-                    href="tel:+919871667213"
-                    className="rounded-lg bg-gray-50 p-3 transition hover:bg-[#34acb1]/10"
-                  >
-                    <span className="block text-[9px] font-semibold uppercase tracking-wide text-gray-400">
-                      Call Us
-                    </span>
-
-                    <span className="mt-1 block text-xs font-semibold text-gray-700">
-                      +91-9871667213
-                    </span>
-                  </a>
-
-                  <a
-                    href="tel:+918383972282"
-                    className="rounded-lg bg-gray-50 p-3 transition hover:bg-[#34acb1]/10"
-                  >
-                    <span className="block text-[9px] font-semibold uppercase tracking-wide text-gray-400">
-                      Office
-                    </span>
-
-                    <span className="mt-1 block text-xs font-semibold text-gray-700">
-                      +91-8383972282
-                    </span>
-                  </a>
-                </div>
-
-                <div className="mt-3 text-xs text-gray-400">
+                <div className="mt-3 text-xs text-gray-600 font-bold">
                   GST No.{" "}
                   <span className="font-medium text-gray-600">
                     07BJSPR2098P1Z1

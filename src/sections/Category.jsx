@@ -205,9 +205,9 @@ export default function CategoryPage({
                       <th className="px-6 py-5 text-sm font-bold">Finish</th>
                     )}
 
-                    {/* Features */}
-                    {data.some((item) => item.features?.length > 0) && (
-                      <th className="px-6 py-5 text-sm font-bold">Features</th>
+                    {/* Options */}
+                    {data.some((item) => item.options?.length > 0) && (
+                      <th className="px-6 py-5 text-sm font-bold">Options</th>
                     )}
 
                     {/* Notes */}
@@ -293,12 +293,12 @@ export default function CategoryPage({
                         </td>
                       )}
 
-                      {/* Features */}
-                      {data.some((item) => item.features?.length > 0) && (
+                      {/* Options */}
+                      {data.some((item) => item.options?.length > 0) && (
                         <td className="px-6 py-5">
-                          {item.features?.length > 0 ? (
+                          {item.options?.length > 0 ? (
                             <div className="space-y-1">
-                              {item.features.map((feature) => (
+                              {item.options.map((feature) => (
                                 <div
                                   key={feature}
                                   className="flex items-center gap-2 text-sm text-gray-600"
@@ -447,15 +447,15 @@ export default function CategoryPage({
                     </div>
                   )}
 
-                  {/* Features */}
-                  {item.features?.length > 0 && (
+                  {/* Options */}
+                  {item.options?.length > 0 && (
                     <div>
                       <p className="text-xs font-bold uppercase tracking-wider text-gray-400">
-                        Features
+                        Options
                       </p>
 
                       <div className="mt-2 space-y-2">
-                        {item.features.map((feature) => (
+                        {item.options.map((feature) => (
                           <div
                             key={feature}
                             className="flex items-start gap-2 text-sm text-gray-600"

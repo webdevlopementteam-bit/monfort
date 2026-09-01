@@ -39,6 +39,14 @@ const products = [
     href: "/products?category=waterfall",
   },
   {
+    number: "06",
+    title: "Metallic & Granite Series",
+    description:
+      "Premium metallic and granite sinks available in 45×20, 24×18 and 37×18 inch sizes, featuring elegant finishes such as Ivory Sand, Gray, Cera Dotted, Red Moon, Peach Ivory and Black etc...",
+    image: "/products/metallicAndgranite.png",
+    href: "/products?category=metallic_granite",
+  },
+  {
     number: "05",
     title: "304 grade handmade sinks",
     description:
@@ -49,10 +57,6 @@ const products = [
 ];
 
 export default function Products() {
-  const [showAll, setShowAll] = useState(false);
-
-  const visibleProducts = showAll ? products : products.slice(0, 6);
-
   return (
     <section
       id="products"
@@ -73,7 +77,7 @@ export default function Products() {
 
         {/* Product Grid */}
         <div className="mt-10 grid gap-5 sm:mt-12 sm:gap-6 md:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-7">
-          {visibleProducts.map((product) => (
+          {products.map((product) => (
             <div
               key={product.number}
               className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-[#258F94]/20 hover:shadow-2xl hover:shadow-[#258F94]/10 sm:rounded-3xl"
@@ -100,7 +104,7 @@ export default function Products() {
                   {product.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-gray-600">
+                <p className="mt-3 h-[96px] overflow-hidden text-sm leading-6 text-gray-600 line-clamp-4">
                   {product.description}
                 </p>
 
