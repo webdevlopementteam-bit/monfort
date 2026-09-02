@@ -8,37 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSwiper() {
-  // const slides = [
-  //   {
-  //     img: "/hero/hero1.jpg",
-  //     eyebrow: "PREMIUM STAINLESS STEEL SINKS",
-  //     title: "Crafting Quality for Modern Kitchens",
-  //     text: "Premium stainless steel kitchen sinks designed with superior finishing, durability and modern aesthetics.",
-  //     button: "Explore Sinks",
-  //   },
-  //   {
-  //     img: "/hero/hero2.jpg",
-  //     eyebrow: "TRUSTED MANUFACTURING",
-  //     title: "Quality You Can Depend On",
-  //     text: "Serving homes, hotels, restaurants and commercial kitchens with reliable products and customer-focused service.",
-  //     button: "Contact Us",
-  //   },
-  //   {
-  //     img: "/hero/hero3.jpg",
-  //     eyebrow: "SINCE 2000",
-  //     title: "Built on Quality & Precision",
-  //     text: "Advanced machinery, skilled craftsmanship and strict quality control ensure excellence in every sink we manufacture.",
-  //     button: "About Monfort",
-  //   },
-  //   {
-  //     img: "/hero/hero4.jpg",
-  //     eyebrow: "DESIGNED FOR EVERY KITCHEN",
-  //     title: "From Classic to Designer Sinks",
-  //     text: "Discover handmade and Indian sinks, including single bowl, double bowl and designer styles crafted to match modern lifestyles.",
-  //     button: "View Products",
-  //   },
-  // ];
-
   const slides = [
     {
       img: "/hero/hero1.jpg",
@@ -84,7 +53,7 @@ export default function HeroSwiper() {
         slidesPerView={1}
         loop
         autoplay={{
-          delay: 6000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         className="h-[520px] sm:h-[580px] md:h-[650px] lg:h-[680px]"
@@ -109,66 +78,67 @@ export default function HeroSwiper() {
 
             {/* Content */}
             <div className="relative z-10 flex h-full items-center">
-              <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12">
+              <div className="mx-auto w-full max-w-7xl px-4 sm:px-8 lg:px-12">
                 <div className="max-w-3xl">
                   {/* Eyebrow */}
-                  <div className="mb-5 inline-flex items-center gap-3 rounded-full border border-white/40 bg-white/10 px-4 py-2 backdrop-blur-md">
-                    <span className="h-2 w-2 rounded-full bg-white" />
-                    <span className="text-xs font-semibold tracking-[0.2em] text-white sm:text-sm">
+                  <div className="mb-3 inline-flex max-w-full items-center gap-2 rounded-full border border-white/40 bg-white/10 px-3 py-1.5 backdrop-blur-md sm:mb-5 sm:gap-3 sm:px-4 sm:py-2">
+                    <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-white sm:h-2 sm:w-2" />
+
+                    <span className="text-[9px] font-semibold leading-tight tracking-[0.12em] text-white sm:text-sm sm:tracking-[0.2em]">
                       {slide.eyebrow}
                     </span>
                   </div>
 
                   {/* Heading */}
-                  <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                  <h1 className="max-w-3xl text-3xl font-bold leading-[1.12] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
                     {slide.title}
                   </h1>
 
                   {/* Description */}
-                  <p className="mt-5 max-w-2xl text-base leading-7 text-white/90 sm:text-lg md:text-xl md:leading-8">
+                  <p className="mt-4 max-w-2xl text-sm leading-6 text-white/90 sm:mt-5 sm:text-lg sm:leading-7 md:text-xl md:leading-8">
                     {slide.text}
                   </p>
 
                   {/* Buttons */}
-                  <div className="mt-8 flex flex-wrap gap-4">
+                  <div className="mt-6 flex flex-wrap gap-3 sm:mt-8 sm:gap-4">
                     <Link
                       href={slide.link}
-                      className="rounded-full bg-white px-7 py-3.5 text-sm font-bold text-[#34acb1] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-100"
+                      className="rounded-full bg-white px-5 py-3 text-xs font-bold text-[#34acb1] shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-gray-100 sm:px-7 sm:py-3.5 sm:text-sm"
                     >
                       {slide.button}
                     </Link>
 
                     <Link
                       href="/contact"
-                      className="rounded-full border border-white/70 bg-white/10 px-7 py-3.5 text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#34acb1]"
+                      className="rounded-full border border-white/70 bg-white/10 px-5 py-3 text-xs font-bold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#34acb1] sm:px-7 sm:py-3.5 sm:text-sm"
                     >
                       Get In Touch
                     </Link>
                   </div>
 
                   {/* Brand Highlights */}
-                  <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-white/30 pt-6">
+                  <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3 border-t border-white/30 pt-4 sm:mt-10 sm:gap-6 sm:pt-6">
                     <div>
-                      <p className="text-2xl font-bold">2000</p>
-                      <p className="text-xs uppercase tracking-wider text-white/75">
+                      <p className="text-xl font-bold sm:text-2xl">2000</p>
+                      <p className="text-[9px] uppercase tracking-wider text-white/75 sm:text-xs">
                         Established
                       </p>
                     </div>
 
-                    <div className="h-10 w-px bg-white/30" />
+                    <div className="h-8 w-px bg-white/30 sm:h-10" />
 
                     <div>
-                      <p className="text-2xl font-bold">Premium</p>
-                      <p className="text-xs uppercase tracking-wider text-white/75">
+                      <p className="text-xl font-bold sm:text-2xl">Premium</p>
+                      <p className="text-[9px] uppercase tracking-wider text-white/75 sm:text-xs">
                         Stainless Steel
                       </p>
                     </div>
 
-                    <div className="h-10 w-px bg-white/30" />
+                    <div className="h-8 w-px bg-white/30 sm:h-10" />
 
                     <div>
-                      <p className="text-2xl font-bold">100%</p>
-                      <p className="text-xs uppercase tracking-wider text-white/75">
+                      <p className="text-xl font-bold sm:text-2xl">100%</p>
+                      <p className="text-[9px] uppercase tracking-wider text-white/75 sm:text-xs">
                         Quality Focused
                       </p>
                     </div>
