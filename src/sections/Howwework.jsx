@@ -147,8 +147,8 @@ export default function HowWeWork() {
                       </>
                     ) : (
                       <>
-                        {captionBlock}
-                        {circleBlock}
+                        <div className="max-sm:order-2">{captionBlock}</div>
+                        <div className="max-sm:order-1">{circleBlock}</div>
                       </>
                     )}
                   </div>

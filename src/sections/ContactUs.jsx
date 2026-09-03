@@ -24,6 +24,8 @@ export default function Contact() {
     message: "",
   });
 
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -31,12 +33,39 @@ export default function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setStatus("sending");
 
-    console.log("Contact Form:", formData);
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "a2be3110-9cf8-494a-ba32-8f3a28caa0f4",
+          ...formData,
+        }),
+      });
 
-    // Add your API / email service here
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("success");
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
   };
 
   return (
@@ -433,15 +462,29 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#0B1112] px-7 py-4 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#34acb1] hover:shadow-[#34acb1]/30"
+                    disabled={status === "sending"}
+                    className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#0B1112] px-7 py-4 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#34acb1] hover:shadow-[#34acb1]/30 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
                   >
-                    Send Enquiry
+                    {status === "sending" ? "Sending..." : "Send Enquiry"}
                     <Send
                       size={17}
                       className="transition-transform duration-300 group-hover:translate-x-1"
                     />
                   </button>
                 </div>
+
+                {status === "success" && (
+                  <p className="text-sm font-semibold text-[#258F94]">
+                    Thank you! Your enquiry has been sent successfully.
+                  </p>
+                )}
+
+                {status === "error" && (
+                  <p className="text-sm font-semibold text-red-600">
+                    Something went wrong. Please try again or contact us
+                    directly.
+                  </p>
+                )}
               </form>
             </div>
           </div>
