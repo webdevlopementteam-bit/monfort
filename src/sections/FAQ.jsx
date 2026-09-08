@@ -9,46 +9,11 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
+import { Reveal } from "@/components/motion/Reveal";
 
-// ================= FAQ DATA =================
 
-// const faqs = [
-//   {
-//     question: "What types of kitchen sinks do you manufacture?",
-//     answer:
-//       "We manufacture a wide range of premium kitchen sinks including single bowl, double bowl, handmade, designer and modern stainless steel sinks. Our products are available in different sizes, finishes and designs to suit residential and commercial kitchens.",
-//   },
-//   {
-//     question: "What material is used to manufacture your sinks?",
-//     answer:
-//       "Our kitchen sinks are manufactured using high-quality stainless steel selected for durability, strength, corrosion resistance and long-lasting performance.",
-//   },
-//   {
-//     question: "Do you offer different sink sizes and designs?",
-//     answer:
-//       "Yes. We offer multiple sizes and designs to suit different kitchen layouts. Our range includes compact single and double bowl sinks, handmade sinks and designer models.",
-//   },
-//   {
-//     question: "Are Monfort Kitchen sinks suitable for commercial kitchens?",
-//     answer:
-//       "Yes. Our sinks are suitable for homes as well as hotels, restaurants, commercial kitchens and other professional environments where durability and reliable performance are important.",
-//   },
-//   {
-//     question: "What finishes are available?",
-//     answer:
-//       "We offer a variety of finishes and surface styles depending on the product model, including modern, premium and designer finishes that complement contemporary kitchen interiors.",
-//   },
-//   {
-//     question: "Can I enquire about bulk or commercial orders?",
-//     answer:
-//       "Absolutely. We welcome bulk, commercial and project-based enquiries. Contact our team with your requirements and we can help you choose suitable products and quantities.",
-//   },
-//   {
-//     question: "How can I contact Monfort Kitchen?",
-//     answer:
-//       "You can contact our team through the Get In Touch option on our website. Share your product requirements and our team will assist you with product information and enquiries.",
-//   },
-// ];
+
+
 const faqs = [
   {
     question: "What types of kitchen sinks do you manufacture?",
@@ -127,7 +92,7 @@ export default function FAQ() {
               LEFT SIDE
           ====================================================== */}
 
-          <div className="relative">
+          <Reveal direction="left" className="relative">
             {/* Section Label */}
 
             <div className="mb-5 flex items-center gap-3">
@@ -140,10 +105,10 @@ export default function FAQ() {
 
             {/* Heading */}
 
-            <h2 className="font-serif text-3xl font-bold leading-[1.15] text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
+            <h2 className="text-2xl font-semibold leading-[1.25] text-gray-900 sm:text-3xl lg:text-4xl">
               Everything You
               <br />
-              <span className="italic font-medium text-[#34acb1]">
+              <span className="font-medium text-[#34acb1]">
                 Need To Know.
               </span>
             </h2>
@@ -174,7 +139,7 @@ export default function FAQ() {
                   <MessageCircleQuestion size={28} />
                 </div>
 
-                <h3 className="mt-6 font-serif text-2xl font-semibold text-white sm:text-3xl">
+                <h3 className="mt-6 text-2xl font-semibold text-white sm:text-3xl">
                   Still Have Questions?
                 </h3>
 
@@ -233,13 +198,13 @@ export default function FAQ() {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* =====================================================
               RIGHT SIDE — FAQ ACCORDION
           ====================================================== */}
 
-          <div className="relative">
+          <Reveal direction="right" className="relative">
             {/* Small top badge */}
 
             <div className="mb-5 flex items-center justify-between">
@@ -276,7 +241,7 @@ export default function FAQ() {
                       {/* Number */}
 
                       <span
-                        className={`hidden shrink-0 font-serif text-sm font-bold transition-colors duration-300 sm:block ${
+                        className={`hidden shrink-0 text-sm font-bold transition-colors duration-300 sm:block ${
                           isOpen
                             ? "text-[#34acb1]"
                             : "text-gray-300 group-hover:text-[#34acb1]"
@@ -353,7 +318,7 @@ export default function FAQ() {
                 </Link>
               </p>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
 

@@ -5,6 +5,7 @@ import {
   ShieldCheck,
   Truck,
 } from "lucide-react";
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/Reveal";
 
 const steps = [
   {
@@ -50,17 +51,17 @@ export default function HowWeWork() {
           <div className="pointer-events-none absolute -bottom-16 left-1/3 w-28 h-28 rounded-full bg-gradient-to-br from-gray-100 to-gray-300 opacity-60 hidden sm:block" />
 
           {/* Heading */}
-          <div className="relative z-10 mb-16 lg:mb-24">
+          <Reveal className="relative z-10 mb-16 lg:mb-24">
             <span className="text-red-600 uppercase tracking-[4px] font-semibold text-sm">
               Our Process
             </span>
 
-            <h2 className="mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold uppercase text-gray-900 leading-[1.05]">
+            <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-semibold uppercase text-gray-900 leading-[1.15]">
               How We
               <br />
               Work?
             </h2>
-          </div>
+          </Reveal>
 
           {/* Zigzag Steps */}
           <div className="relative z-10">
@@ -106,7 +107,7 @@ export default function HowWeWork() {
               })}
             </svg>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-14 relative">
+            <StaggerGroup className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-6 gap-y-14 relative">
               {steps.map((step, index) => {
                 const Icon = step.icon;
                 const circleFirst = index % 2 === 0;
@@ -123,10 +124,10 @@ export default function HowWeWork() {
 
                 const captionBlock = (
                   <div className="text-center lg:text-left">
-                    <div className="text-2xl font-extrabold text-gray-900">
+                    <div className="text-xl font-semibold text-gray-900">
                       0{index + 1}
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mt-1">
+                    <h3 className="text-lg font-semibold text-gray-900 mt-1">
                       {step.title}
                     </h3>
                     <p className="mt-2 text-sm text-gray-600 leading-6">
@@ -136,7 +137,7 @@ export default function HowWeWork() {
                 );
 
                 return (
-                  <div
+                  <StaggerItem
                     key={index}
                     className="flex flex-col gap-6 lg:h-[300px] lg:justify-between"
                   >
@@ -151,10 +152,10 @@ export default function HowWeWork() {
                         <div className="max-sm:order-1">{circleBlock}</div>
                       </>
                     )}
-                  </div>
+                  </StaggerItem>
                 );
               })}
-            </div>
+            </StaggerGroup>
           </div>
         </div>
       </div>

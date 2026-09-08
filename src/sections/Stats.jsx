@@ -55,7 +55,7 @@ export default function StatsSection() {
           </div>
 
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Numbers That <span className="text-[#5fc2c6]">Speak For Us</span>
+            Numbers That <span className="text-[#5fc2c6]">Speaks</span>
           </h2>
 
           <p className="mx-auto mt-3 max-w-lg text-sm leading-6 text-gray-300">

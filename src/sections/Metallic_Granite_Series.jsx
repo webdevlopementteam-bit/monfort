@@ -44,7 +44,7 @@ function ProductSwiper({ title, products }) {
 
           {/* TITLE */}
           <div className="flex flex-wrap items-center gap-3">
-            <h3 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+            <h3 className="text-xl font-semibold tracking-tight text-gray-900 sm:text-2xl">
               {size}
             </h3>
 
@@ -242,7 +242,7 @@ export default function MetallicGraniteSeries() {
           </div>
 
           {/* MAIN TITLE */}
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl ">
+          <h2 className="text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl md:text-4xl ">
             Metallic &{" "}
             <span className="relative inline-block text-[#30ADB2]">
               Granite Series

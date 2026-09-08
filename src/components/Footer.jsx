@@ -26,7 +26,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Contact */}
           <div>
-            <h3 className="text-white text-2xl md:text-3xl font-bold mb-8">
+            <h3 className="text-white text-xl md:text-2xl font-semibold mb-8">
               Contact Us
             </h3>
 
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white text-2xl md:text-3xl font-bold mb-8">
+            <h3 className="text-white text-xl md:text-2xl font-semibold mb-8">
               Quick Links
             </h3>
             <div className="space-y-3">
@@ -103,7 +103,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="text-white text-2xl md:text-3xl font-bold mb-8">
+            <h3 className="text-white text-xl md:text-2xl font-semibold mb-8">
               Products
             </h3>
             <div className="space-y-3">
@@ -125,7 +125,7 @@ export default function Footer() {
 
           {/* Location */}
           <div>
-            <h3 className="text-white text-2xl md:text-3xl font-bold mb-8">
+            <h3 className="text-white text-xl md:text-2xl font-semibold mb-8">
               Location
             </h3>
             <iframe

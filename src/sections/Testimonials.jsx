@@ -15,6 +15,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useEffect, useState } from "react";
+import { Reveal } from "@/components/motion/Reveal";
 
 // ================= TESTIMONIAL DATA =================
 
@@ -77,12 +78,14 @@ const testimonials = [
 
 export default function Testimonials() {
   const [client, setClient] = useState(false);
+
+  useEffect(() => {
+    setClient(true);
+  }, []);
+
   if (!client) {
     return null;
   }
-  useEffect(() => {
-    setClient(true);
-  });
 
   return (
     <section
@@ -109,7 +112,7 @@ export default function Testimonials() {
             HEADER
         ====================================================== */}
 
-        <div className="mx-auto max-w-3xl text-center">
+        <Reveal className="mx-auto max-w-3xl text-center">
           {/* Section Label */}
 
           <div className="mb-4 flex items-center justify-center gap-2.5 sm:mb-5 sm:gap-3">
@@ -124,10 +127,10 @@ export default function Testimonials() {
 
           {/* Heading */}
 
-          <h2 className="font-serif text-3xl font-bold leading-[1.15] text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="text-2xl font-semibold leading-[1.25] text-gray-900 sm:text-3xl lg:text-4xl">
             What Our Customers
             <br />
-            <span className="italic font-medium text-[#34acb1]">
+            <span className="font-medium text-[#34acb1]">
               Say About Us.
             </span>
           </h2>
@@ -138,7 +141,7 @@ export default function Testimonials() {
             Trusted by homeowners, interior designers and businesses for premium
             kitchen sinks, modern designs and dependable quality.
           </p>
-        </div>
+        </Reveal>
 
         {/* =====================================================
             SWIPER

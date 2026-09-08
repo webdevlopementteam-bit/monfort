@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { TrendingUp, BadgeCheck, Handshake } from "lucide-react";
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/Reveal";
 
 const features = [
   {
@@ -32,7 +33,7 @@ export default function WhyChooseUs() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
           {/* ================= LEFT ================= */}
-          <div>
+          <Reveal direction="left">
             {/* Small Heading */}
             <div className="mb-5 flex items-center gap-3">
               <span className="h-[2px] w-10 bg-[#258F94]" />
@@ -43,7 +44,7 @@ export default function WhyChooseUs() {
             </div>
 
             {/* Main Heading */}
-            <h2 className="mb-5 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl">
+            <h2 className="mb-5 text-2xl font-semibold leading-tight text-gray-900 sm:text-3xl">
               Why Choose <span className="text-[#258F94]">Us?</span>
             </h2>
 
@@ -57,12 +58,12 @@ export default function WhyChooseUs() {
             </p>
 
             {/* Features */}
-            <div className="mt-10 space-y-7">
+            <StaggerGroup className="mt-10 space-y-7">
               {features.map((item, index) => {
                 const Icon = item.icon;
 
                 return (
-                  <div
+                  <StaggerItem
                     key={index}
                     className="group flex gap-5 rounded-2xl border border-transparent p-4 transition-all duration-300 hover:border-[#258F94]/15 hover:bg-[#258F94]/5 hover:shadow-lg hover:shadow-[#258F94]/5 sm:gap-6 sm:p-5"
                   >
@@ -73,7 +74,7 @@ export default function WhyChooseUs() {
 
                     {/* Content */}
                     <div className="pt-1">
-                      <h3 className="mb-2 text-xl font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#258F94] sm:text-2xl">
+                      <h3 className="mb-2 text-lg font-semibold text-gray-900 transition-colors duration-300 group-hover:text-[#258F94] sm:text-xl">
                         {item.title}
                       </h3>
 
@@ -81,14 +82,14 @@ export default function WhyChooseUs() {
                         {item.description}
                       </p>
                     </div>
-                  </div>
+                  </StaggerItem>
                 );
               })}
-            </div>
-          </div>
+            </StaggerGroup>
+          </Reveal>
 
           {/* ================= RIGHT ================= */}
-          <div className="relative flex justify-center lg:justify-end">
+          <Reveal direction="right" className="relative flex justify-center lg:justify-end">
             {/* Decorative Circle */}
             <div className="absolute -right-4 -top-6 h-24 w-24 rounded-full border-[10px] border-[#258F94]/10 sm:h-28 sm:w-28" />
 
@@ -107,7 +108,7 @@ export default function WhyChooseUs() {
                 />
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -85,7 +85,7 @@ export default function CategoryPage({
               <span className="h-[2px] w-10 bg-[#258F94]" />
             </div>
 
-            <h1 className="text-4xl font-bold leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
+            <h1 className="text-2xl font-semibold leading-tight text-gray-900 sm:text-3xl lg:text-4xl">
               {title}
             </h1>
 
@@ -157,7 +157,7 @@ export default function CategoryPage({
               <span className="h-[2px] w-10 bg-[#258F94]" />
             </div>
 
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+            <h2 className="text-2xl font-semibold text-gray-900 sm:text-3xl">
               Available <span className="text-[#258F94]">Models</span>
             </h2>
 
@@ -364,7 +364,7 @@ export default function CategoryPage({
                       {isRangeCategory ? "Range" : "Model"}
                     </p>
 
-                    <h3 className="mt-1 text-xl font-bold text-gray-900">
+                    <h3 className="mt-1 text-xl font-semibold text-gray-900">
                       {isRangeCategory
                         ? item.range ||
                           `Model ${String(index + 1).padStart(2, "0")}`
