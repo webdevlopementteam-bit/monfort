@@ -12,6 +12,15 @@ export function generateStaticParams() {
   ];
 }
 
+export async function generateMetadata({ params }) {
+  const { category } = await params;
+  return {
+    alternates: {
+      canonical: `/products/${category}`,
+    },
+  };
+}
+
 export default async function ProductCategoryPage({ params }) {
   const { category } = await params;
 

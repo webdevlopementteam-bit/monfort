@@ -174,23 +174,25 @@ export default function AboutSection() {
             </div>
 
             <h2 className="text-2xl font-semibold leading-[1.2] tracking-tight text-[#0B1112] sm:text-3xl lg:text-4xl">
-              Monfort Kitchen Sink
+              About Monfort: A Sink
               <br />
-              <span className="text-[#34ACB1]">Since 2000</span>
+              <span className="text-[#34ACB1]">Manufacturer in Delhi</span>
             </h2>
 
-            <p className="mt-3 text-base text-gray-500 sm:text-lg">
-              Built on Trust, Made for Life.
-            </p>
-
-            <p className="mt-5 max-w-xl text-sm leading-7 text-gray-600 sm:text-[15px]">
-              Monfort Kitchen Sink has been dedicated to bringing quality,
-              functionality, and timeless design to modern kitchens since
-              2000. With years of experience in the kitchen sink industry, we
-              focus on creating sinks that combine practical everyday
-              performance with elegant design. Our aim is to make every
-              kitchen more convenient, hygienic, and visually appealing.
-            </p>
+            <div className="mt-5 max-w-xl space-y-4 text-sm leading-7 text-gray-600 sm:text-[15px]">
+              <p>
+                We started with a simple aim: make kitchen sinks that work
+                properly and look good while doing it. Twenty-five years on,
+                we run a large production unit that turns out sinks in bulk
+                from premium stainless steel, and our products reach kitchens
+                across India through more than 6,000 dealers.
+              </p>
+              <p>
+                Since we make the sinks ourselves, you can ask about size,
+                finish or model and get an answer from the team that actually
+                builds them.
+              </p>
+            </div>
 
             {/* Feature Icons Row */}
             <div className="mt-9 grid grid-cols-2 gap-x-4 gap-y-7 sm:grid-cols-4">

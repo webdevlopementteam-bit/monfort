@@ -1,10 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, LayoutGrid, Sparkles } from "lucide-react";
+import { ArrowLeft, LayoutGrid, Sparkles, Lightbulb, ShowerHead } from "lucide-react";
 
-import { Reveal } from "@/components/motion/Reveal";
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/Reveal";
 import ProductTileGrid from "@/sections/ProductTileGrid";
+
+const sinkTypes = [
+  {
+    title: "Indian sinks",
+    text: "everyday sinks with a glossy finish, made for regular family use.",
+  },
+  {
+    title: "Handmade sinks",
+    text: "available in Matt, Nano Black, Gold, Mirror and Rose Gold.",
+  },
+  {
+    title: "Premium handmade sinks",
+    text: "for kitchens where the sink is meant to stand out.",
+  },
+  {
+    title: "Waterfall sinks",
+    text: "a designer option for modern, contemporary kitchens.",
+  },
+  {
+    title: "Quartz sinks",
+    text: "a good pick if you'd like something different from steel.",
+  },
+];
 
 const mainCategories = [
   {
@@ -165,6 +188,116 @@ export default function Products({ standalone = false }) {
             MAIN CATEGORY GRID
         ====================================================== */}
         <ProductTileGrid tiles={mainCategories} cover />
+
+        {/* =====================================================
+            KITCHEN SINKS FOR EVERY KIND OF KITCHEN
+        ====================================================== */}
+        <Reveal className="mt-16 sm:mt-20 lg:mt-24">
+          <div className="rounded-3xl border border-gray-100 bg-white p-6 shadow-[0_10px_40px_rgba(11,17,18,0.05)] sm:p-8 lg:p-10">
+            <div className="max-w-2xl">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="h-[2px] w-8 bg-[#258F94]" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#258F94]">
+                  Our Range
+                </span>
+              </div>
+
+              <h2 className="text-2xl font-semibold tracking-tight text-[#142A3D] sm:text-3xl">
+                Kitchen Sinks for Every Kind of Kitchen
+              </h2>
+
+              <p className="mt-3 text-sm leading-7 text-gray-600 sm:text-base">
+                Every kitchen is different, so we don&apos;t make just one
+                kind of sink.
+              </p>
+            </div>
+
+            <StaggerGroup className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {sinkTypes.map((item, index) => (
+                <StaggerItem
+                  key={index}
+                  className="rounded-2xl bg-[#f7f9f9] p-5 transition-colors duration-300 hover:bg-[#258F94]/5"
+                >
+                  <p className="text-sm font-semibold text-[#142A3D]">
+                    {item.title}
+                  </p>
+                  <p className="mt-1.5 text-sm leading-6 text-gray-600">
+                    {item.text}
+                  </p>
+                </StaggerItem>
+              ))}
+            </StaggerGroup>
+
+            <p className="mt-8 max-w-3xl text-sm leading-7 text-gray-600 sm:text-base">
+              Our sinks come in single bowl and double bowl designs. Common
+              sizes (in inches) include 18x16, 20x17, 24x18, 30x18, 37x18 and
+              45x20, with larger sizes in some ranges. If you like a granite
+              or metallic look, our Metallic &amp; Granite series comes in
+              Black, Brown, Gray, Ivory Sand, Red Moon, Peach Ivory and more.
+            </p>
+          </div>
+        </Reveal>
+
+        {/* =====================================================
+            CHOOSING THE RIGHT SINK + BATHROOM ACCESSORIES
+        ====================================================== */}
+        <StaggerGroup className="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-2">
+          {/* Choosing the Right Sink */}
+          <StaggerItem className="rounded-3xl border border-gray-100 bg-white p-6 shadow-[0_10px_40px_rgba(11,17,18,0.05)] sm:p-8">
+            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#258F94]/10 text-[#258F94]">
+              <Lightbulb size={22} strokeWidth={1.8} />
+            </div>
+
+            <h3 className="text-xl font-semibold tracking-tight text-[#142A3D] sm:text-2xl">
+              Choosing the Right Sink: A Few Practical Pointers
+            </h3>
+
+            <div className="mt-4 space-y-4 text-sm leading-7 text-gray-600 sm:text-base">
+              <p>
+                Stainless steel is the usual choice for Indian kitchens
+                because it handles heat, heavy utensils and daily scrubbing
+                well. If you use big vessels often, a large single bowl or a
+                bigger double bowl will be easier to work with, while a
+                single bowl saves counter space in a small kitchen.
+              </p>
+              <p>
+                Finish matters too. A mirror finish looks sharp but shows
+                scratches and water marks sooner, while a matt finish hides
+                everyday wear better. And measure your counter cut-out before
+                you decide, because a sink that is off by even a couple of
+                inches becomes a headache later.
+              </p>
+            </div>
+          </StaggerItem>
+
+          {/* Bathroom Accessories Too */}
+          <StaggerItem className="rounded-3xl border border-gray-100 bg-white p-6 shadow-[0_10px_40px_rgba(11,17,18,0.05)] sm:p-8">
+            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#258F94]/10 text-[#258F94]">
+              <ShowerHead size={22} strokeWidth={1.8} />
+            </div>
+
+            <h3 className="text-xl font-semibold tracking-tight text-[#142A3D] sm:text-2xl">
+              Bathroom Accessories Too
+            </h3>
+
+            <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
+              Many customers ask us for matching bathroom fittings, so we
+              make those as well: drainers (jaali), health faucets, jet
+              sprays, soap dispensers, overhead showers, towel rings and
+              racks, PTMT and brass taps, and acrylic accessories. Our
+              premium stainless steel Brayston and Technova series is for
+              anyone who wants the whole bathroom to look coordinated.
+            </p>
+
+            <Link
+              href="/products/bathroom-accessories"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#258F94] transition-colors hover:text-[#1f7377]"
+            >
+              Explore Bathroom Accessories
+              <ArrowLeft size={15} className="rotate-180" />
+            </Link>
+          </StaggerItem>
+        </StaggerGroup>
       </div>
     </section>
   );

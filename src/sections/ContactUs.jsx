@@ -102,12 +102,12 @@ export default function Contact() {
               <span className="h-px w-10 bg-[#34acb1]" />
             </div>
 
-            <h1 className="text-3xl font-semibold leading-[1.15] tracking-tight text-[#101718] sm:text-4xl lg:text-5xl">
+            <h3 className="text-3xl font-semibold leading-[1.15] tracking-tight text-[#101718] sm:text-4xl lg:text-5xl">
               Let&apos;s Create Your
               <span className="block text-[#34acb1]">
                 Perfect Kitchen.
               </span>
-            </h1>
+            </h3>
 
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-[#66716D] sm:text-base sm:leading-8 lg:text-lg">
               Have a question about our kitchen sinks or looking for the right

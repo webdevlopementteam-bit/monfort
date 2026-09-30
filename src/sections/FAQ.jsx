@@ -16,39 +16,55 @@ import { Reveal } from "@/components/motion/Reveal";
 
 const faqs = [
   {
-    question: "What types of kitchen sinks do you manufacture?",
+    question: "Who is a trusted sink manufacturer in Delhi?",
     answer:
-      "We offer a wide range of kitchen products including Handmade Sinks, Indian Kitchen Sinks, 304 Grade Sinks, Waterfall Sinks and Metallic & Granite Series. Our collection includes both single bowl and double bowl designs in multiple sizes and styles.",
+      "Monfort is an established sink manufacturer in Delhi, working from Bawana Industrial Area since 2000. We make Indian, handmade, premium handmade, waterfall and quartz kitchen sinks and supply through 6,000+ dealers across India.",
   },
   {
-    question: "What material is used to manufacture your sinks?",
+    question: "Which material is best for a kitchen sink?",
     answer:
-      "Our sink collection includes stainless steel products such as Handmade Sinks, Indian Kitchen Sinks and 304 Grade Sinks. We also offer a Metallic & Granite Series with a variety of decorative finishes and designs.",
+      "Stainless steel is the most popular choice for Indian kitchens. It is strong, hygienic, heat-resistant and easy to clean. Higher grades such as 304 resist rust and staining better.",
   },
   {
-    question: "Do you offer different sink sizes and designs?",
+    question:
+      "What is the difference between a handmade sink and an Indian sink?",
     answer:
-      "Yes. Our sinks are available in multiple sizes, including popular options such as 14x16, 18x16, 20x17, 21x18, 22x18, 24x18, 30x18, 37x18, 45x20 and larger designs, depending on the product category.",
+      "Handmade sinks are generally made with more detailing and come in premium finishes like Matt, Nano Black, Gold, Mirror and Rose Gold. Indian sinks are the everyday option with a glossy finish. Handmade suits modern kitchens, and Indian suits regular family use.",
   },
   {
-    question: "Are Monfort Kitchen sinks suitable for commercial kitchens?",
+    question: "What is a 304 grade stainless steel sink?",
     answer:
-      "Our product range includes durable sink designs available in different sizes and configurations, including single bowl and double bowl options. Customers can select a suitable model based on their kitchen requirements and usage needs.",
+      "304 grade is a type of stainless steel that resists rust and staining better than lower grades, which is why it is a common choice for kitchen sinks. Regular cleaning still matters, since hard water can leave white scale marks on any steel sink.",
   },
   {
-    question: "What finishes are available?",
+    question: "What are the standard kitchen sink sizes in India?",
     answer:
-      "Available finishes depend on the product model. Our Handmade Sinks include finishes such as Matt, Nano Black, Gold, Mirror and Rose Gold. Indian Sinks are available in Glossy finish, while our Metallic & Granite Series includes finishes such as Black, Brown, Gray, Cera Dotted, Ivory Sand, Red Moon and Peach Ivory.",
+      "Common sizes in inches include 14x16, 18x16, 20x17, 21x18, 22x18, 24x18, 30x18, 37x18 and 45x20. Larger sizes are available in some ranges. Measure your counter cut-out before ordering.",
   },
   {
-    question: "Can I enquire about bulk or commercial orders?",
+    question: "Should I choose a single bowl or a double bowl sink?",
     answer:
-      "Yes. You can contact our team with your product requirements, preferred sink category, size and quantity. We can assist you with suitable options from our Handmade, Indian, 304 Grade, Waterfall and Metallic & Granite collections.",
+      "A single bowl gives more room for large vessels and suits smaller kitchens. A double bowl lets you wash and rinse separately, which works well for busy households. Monfort offers both.",
   },
   {
-    question: "How can I contact Monfort Kitchen?",
+    question: "What finishes are available for kitchen sinks?",
     answer:
-      "You can contact our team through the Get In Touch option on our website. Share the product category, preferred size or model you are interested in, and our team will assist you with further product information and enquiries.",
+      "Handmade sinks come in Matt, Nano Black, Gold, Mirror and Rose Gold, and Indian sinks in Glossy. The Metallic & Granite series comes in Black, Brown, Gray, Cera Dotted, Ivory Sand, Red Moon and Peach Ivory.",
+  },
+  {
+    question: "What decides the price of a kitchen sink?",
+    answer:
+      "Price depends mainly on the steel grade, thickness, size, finish and type of sink. For an exact quote, share your size, model and quantity with the Monfort team.",
+  },
+  {
+    question: "Does Monfort accept bulk, dealer or project orders?",
+    answer:
+      "Yes. Monfort accepts bulk, dealer and commercial project enquiries and delivers across India. Share your product category, size and quantity by phone, WhatsApp or the website enquiry form.",
+  },
+  {
+    question: "How do I clean a stainless steel sink?",
+    answer:
+      "Rinse and wipe it dry after use to avoid water marks. Clean with mild soap and a soft cloth, and avoid steel wool or harsh chemicals. For white scale from hard water, wipe with diluted white vinegar and rinse well.",
   },
 ];
 

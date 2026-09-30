@@ -6,6 +6,15 @@ export function generateStaticParams() {
   return Object.keys(premiumAccessories).map((series) => ({ series }));
 }
 
+export async function generateMetadata({ params }) {
+  const { series } = await params;
+  return {
+    alternates: {
+      canonical: `/products/premium-montfort-accessories/${series}`,
+    },
+  };
+}
+
 export default async function PremiumSeriesPage({ params }) {
   const { series } = await params;
   const selected = premiumAccessories[series];

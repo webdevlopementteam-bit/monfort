@@ -8,6 +8,15 @@ export function generateStaticParams() {
   }));
 }
 
+export async function generateMetadata({ params }) {
+  const { subcategory } = await params;
+  return {
+    alternates: {
+      canonical: `/products/bathroom-accessories/${subcategory}`,
+    },
+  };
+}
+
 export default async function BathroomAccessorySubcategoryPage({ params }) {
   const { subcategory } = await params;
   const selected = bathroomAccessories[subcategory];

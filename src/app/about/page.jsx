@@ -4,6 +4,12 @@ import AboutValues from "@/sections/AboutValues";
 import AboutJourney from "@/sections/AboutJourney";
 import AboutCTA from "@/sections/AboutCTA";
 
+export const metadata = {
+  alternates: {
+    canonical: "/about",
+  },
+};
+
 export default function AboutPage() {
   return (
     <>

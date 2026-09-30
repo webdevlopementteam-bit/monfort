@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloatButton from "@/components/WhatsAppFloatButton";
+import { SITE_URL } from "@/lib/seo";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -11,6 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Monfort",
   description: "",
   icons: {
