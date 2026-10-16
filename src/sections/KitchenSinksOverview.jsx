@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 import ProductTileGrid from "@/sections/ProductTileGrid";
+import KitchenSinkManufacturerContent from "@/sections/KitchenSinkManufacturerContent";
 
 const kitchenSinkTiles = [
   {
@@ -80,7 +81,7 @@ export default function KitchenSinksOverview() {
             </div>
 
             <h1 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-              Kitchen <span className="text-[#67cdd0]">Sinks</span>
+              Kitchen Sink <span className="text-[#67cdd0]">Manufacturer</span>
             </h1>
 
             <div className="mx-auto mt-5 h-[3px] w-16 rounded-full bg-gradient-to-r from-[#258F94] to-[#67cdd0]" />
@@ -99,7 +100,8 @@ export default function KitchenSinksOverview() {
         <ProductTileGrid tiles={kitchenSinkTiles} />
       </div>
 
-      <div className="h-16 lg:h-24" />
+      {/* ================= LONG-FORM CONTENT ================= */}
+      <KitchenSinkManufacturerContent />
     </section>
   );
 }

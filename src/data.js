@@ -526,7 +526,7 @@ export const productCategories = {
     // Drop per-model photos in public/products/handmade/<size>.webp
     imageFolder: "handmade",
     data: sinksCatalog.handmadeSinks,
-    backHref: "/products/kitchen-sinks",
+    backHref: "/products/kitchen-sinks-manufacturer",
   },
   "indian-sink": {
     title: "INDIAN SINK",
@@ -536,7 +536,7 @@ export const productCategories = {
     // Photos live in public/products/indiansink/<size>.webp (e.g. 14x16.webp)
     imageFolder: "indiansink",
     data: sinksCatalog.indianSinks,
-    backHref: "/products/kitchen-sinks",
+    backHref: "/products/kitchen-sinks-manufacturer",
   },
   "ptmt-taps": {
     title: "PTMT TAPS",
@@ -557,7 +557,7 @@ export const productCategories = {
     // Drop per-model photos in public/products/waterfall/<size>.webp
     imageFolder: "waterfall",
     data: sinksCatalog.waterfallSinks,
-    backHref: "/products/kitchen-sinks",
+    backHref: "/products/kitchen-sinks-manufacturer",
   },
   "premium-handmade": {
     title: "PREMIUM HANDMADE KITCHEN SINK",
@@ -567,7 +567,7 @@ export const productCategories = {
     // Drop per-model photos in public/products/grade304/<size>.webp
     imageFolder: "grade304",
     data: sinksCatalog.grade304Sinks,
-    backHref: "/products/kitchen-sinks",
+    backHref: "/products/kitchen-sinks-manufacturer",
   },
 };
 

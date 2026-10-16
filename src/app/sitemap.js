@@ -16,7 +16,7 @@ export default function sitemap() {
     { path: "/contact", priority: 0.8, changeFrequency: "daily" },
     { path: "/products", priority: 0.9, changeFrequency: "daily" },
     {
-      path: "/products/kitchen-sinks",
+      path: "/products/kitchen-sinks-manufacturer",
       priority: 0.9,
       changeFrequency: "daily",
     },

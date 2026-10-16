@@ -20,7 +20,7 @@ import { usePathname } from "next/navigation";
 const productMenu = [
   {
     group: "Kitchen Sinks",
-    href: "/products/kitchen-sinks",
+    href: "/products/kitchen-sinks-manufacturer",
     icon: Droplet,
     items: [
       { name: "Indian Sink", href: "/products/indian-sink" },

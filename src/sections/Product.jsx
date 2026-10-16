@@ -36,7 +36,7 @@ const mainCategories = [
     description:
       "Indian, handmade, waterfall, premium handmade and quartz sinks — crafted for every kind of kitchen.",
     image: "/products/kitchen.webp",
-    href: "/products/kitchen-sinks",
+    href: "/products/kitchen-sinks-manufacturer",
   },
   {
     number: "02",

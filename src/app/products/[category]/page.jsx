@@ -25,7 +25,7 @@ export default async function ProductCategoryPage({ params }) {
   const { category } = await params;
 
   if (category === QUARTZ_SINK_SLUG) {
-    return <MetallicGraniteSeries backHref="/products/kitchen-sinks" />;
+    return <MetallicGraniteSeries backHref="/products/kitchen-sinks-manufacturer" />;
   }
 
   const selected = productCategories[category];
