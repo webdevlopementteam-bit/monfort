@@ -234,16 +234,10 @@ export default function KitchenSinkManufacturerContent() {
       <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#258F94]/5 blur-3xl" />
       <div className="pointer-events-none absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-[#258F94]/5 blur-3xl" />
 
-      <div className="relative mx-auto max-w-4xl px-5 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-6">
         {/* ================= INTRO ================= */}
         <Reveal>
-          <div className="mb-4 flex items-center gap-3">
-            <span className="h-[2px] w-8 bg-[#258F94]" />
-            <span className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#258F94]">
-              Our Range
-            </span>
-          </div>
-
+         
           <h2 className="text-2xl font-semibold tracking-tight text-[#142A3D] sm:text-3xl">
             Best Kitchen Sink Manufacturer in Delhi NCR
           </h2>
